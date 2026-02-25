@@ -185,7 +185,8 @@ git status
 using `.gitignore`\
 Create `data1.csv` file and fill it with a random data line (can be just comma-separated text, it doesn't matter), check status and diff
 
-Create a `.gitignore` file (yes, starting with a dot), put the `data.csv` inside (it's the name of our directory), check status and diff\
+Create a `.gitignore` file (yes, starting with a dot), then if you are on windows PowerShell `Set-Content .gitignore "data/" -Encoding utf8`\
+put the `data.csv` inside (it's the name of our directory), check status and diff\
 `.gitignore` is a file that tells git to ignore certain elements. Should we commit it? <- depends on the workflow and, e.g., who we're working with (we might not want to share it with collaborators)
 
 
@@ -211,6 +212,7 @@ https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
 https://git-scm.com/
 
 https://www.atlassian.com/git
+
 
 
 
