@@ -41,3 +41,5 @@ Plagiarism is not tolerated in any form (including self-plagiarism). You are not
 Deadline for all the assignments is next day by midnight.
 
 18.02 - Assignment 1. Create your github profile (fill up the name and surname), go to this repository and star it.
+
+25.02 - Assignment 2. Git Basics. [Link](https://github.com/glowform/reproducible_research_2025/blob/main/lessons/RR_assignment2_.md)
