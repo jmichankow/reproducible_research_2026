@@ -160,6 +160,7 @@ echo "a second line" >> README.md
 Create a new file named `readme.txt`.
 ```
 touch readme.txt
+echo "some text" > readme.txt
 ```
 Create an empty folder named `data`
 ```
@@ -210,4 +211,5 @@ https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
 https://git-scm.com/
 
 https://www.atlassian.com/git
+
 
