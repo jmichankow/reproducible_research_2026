@@ -42,4 +42,4 @@ Deadline for all the assignments is next day by midnight.
 
 18.02 - Assignment 1. Create your github profile (fill up the name and surname), go to this repository and star it.
 
-25.02 - Assignment 2. Git Basics. [Link](https://github.com/glowform/reproducible_research_2026/blob/main/lessons/RR_assignment2_.md)
+25.02 - Assignment 2. Git Basics. [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_2.md)
