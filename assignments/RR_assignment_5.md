@@ -72,6 +72,7 @@ Sometimes you'll want the owner of the original repository to include your chang
 Go to your forked repository. You should see the information that you're ahead of the repository that you forked.
 
 ## Assignment part 2: Initiating a pull request
+> Zahra Eshtiaghi 476679
 In your repository you can grab the changes from its source. But you can also try to pass your commits to it.
 
 You can do so through the pull requests tab or by clicking the contribute button.
