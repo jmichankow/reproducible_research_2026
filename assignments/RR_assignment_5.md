@@ -58,7 +58,7 @@ Fork our course repository.
 
 Clone the repository so you can work on it locally (use the option you prefer).
 
-Go to the `lessons` folder, edit the `assignment5_hello.txt` file inside (e.g. write the date inside, or whatever you want to).
+Go to the `assignments` folder, edit the `assignment5_hello.txt` file inside (e.g. write the date inside, or whatever you want to).
 
 Stage the change, commit it and push it.
 
