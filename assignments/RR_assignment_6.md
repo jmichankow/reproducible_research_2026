@@ -251,7 +251,7 @@ git commit -am "Change from main branch"
 
 And finally, `git merge branch2`
 
-A text editor should open where we need to edit the file6.txt - in this case just remove the markers added by git. \
+A text editor should open where we need to edit the file.txt - in this case just remove the markers added by git. \
 If the editor doesn't open up automatically, use any text editor to open up this file (notepad, VSCode, nano, etc).
 Save the file, stage, commit.
 
