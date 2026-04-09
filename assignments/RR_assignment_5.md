@@ -81,7 +81,7 @@ Do it now with the course repository.
 ### Question
 
 Is there anything specific you'd like to learn during this course?
-
+- not really -
 
 ## Acknowledgements
 Based on the materials prepared by dr Wojciech Hardy
