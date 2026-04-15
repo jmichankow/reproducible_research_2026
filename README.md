@@ -55,3 +55,5 @@ Deadline for all the assignments is next day by midnight.
 25.03 - Assignment 6. Branches and merging, pt. 1 [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_6.md)
 
 01.04 - Assignment 6. Branches and merging, pt. 2 [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_6.md)
+
+15.04 - Projects discussion
