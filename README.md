@@ -36,7 +36,7 @@ Plagiarism is not tolerated in any form (including self-plagiarism). You are not
 
 ## Annoucements
 
-DS group 2 - Extra test covering the topic of advanced git branching and merge conflicts - TBA
+DS group 2 - Extra test covering the topic of advanced git branching and merge conflicts - **22.04.**
 
 ## Assignments
 
