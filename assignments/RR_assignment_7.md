@@ -84,6 +84,7 @@ Rendering with quarto `quarto render "RR_7_quarto.qmd" --to pdf`
 
 [ Link to the file](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_7_jupyter.ipynb)
 
+Rendering jupyter notebook: `jupyter nbconvert --to pdf notebook.ipynb`
 
 ## Assignment 
 1. Send me a link to your project repository (the one you're doing for this course), with your teammates added as collaborators.
