@@ -35,7 +35,7 @@ You can [link to websites](https://www.example.com) and embed images:
 
 ## Exercise 1 - R Markdown
 
-[ Link to the file](https://github.com/jmichankow/reproducible_research_2026/blob/main/Assignments/RR_7_markdown.Rmd)
+[ Link to the file](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_7_markdown.Rmd)
 
 For PDF support you might want/need to install tinytex 
 
@@ -78,11 +78,11 @@ Final output – .html/tex/pdf/others
 
 Rendering with quarto `quarto render "RR_7_quarto.qmd" --to pdf`
 
-[ Link to the file](https://github.com/jmichankow/reproducible_research_2026/blob/main/Assignments/RR_7_quarto.qmd)
+[ Link to the file](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_7_quarto.qmd)
 
 ## Exercise 3 - Jupyter Notebooks
 
-[ Link to the file](https://github.com/jmichankow/reproducible_research_2026/blob/main/Assignments/RR_7_jupyter.ipynb)
+[ Link to the file](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_7_jupyter.ipynb)
 
 
 ## Assignment 
