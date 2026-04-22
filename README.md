@@ -57,3 +57,5 @@ Deadline for all the assignments is next day by midnight.
 01.04 - Assignment 6. Branches and merging, pt. 2 [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_6.md)
 
 15.04 - Projects discussion
+
+22.04 - Assignment 7. Dynamic documents, pt. 2 [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_7.md)
