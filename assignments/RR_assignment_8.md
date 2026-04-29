@@ -23,7 +23,7 @@ Basic Commands: Let's start with some basic LaTeX commands in Overleaf
 
 ## Presentations
 
-Check the `presentation.tex` and `RR9.rmd` file for examples of presentations in LaTeX and RMD
+Check the `presentation.tex` and `RR8.rmd` file for examples of presentations in LaTeX and RMD
 
 ## Assignment
 
