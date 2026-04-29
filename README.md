@@ -60,4 +60,4 @@ Deadline for all the assignments is next day by midnight.
 
 22.04 - Assignment 7. Dynamic reports [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_7.md)
 
-29.04 - Assignment 8. Intro to LaTeX [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/lessons/RR_assignment_8.md)
+29.04 - Assignment 8. Intro to LaTeX [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_8.md)
