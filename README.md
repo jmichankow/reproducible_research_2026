@@ -36,7 +36,9 @@ Plagiarism is not tolerated in any form (including self-plagiarism). You are not
 
 ## Annoucements
 
-DS group 2 - Extra test covering the topic of advanced git branching and merge conflicts - **22.04.**
+~~DS group 2 - Extra test covering the topic of advanced git branching and merge conflicts - **22.04.**~~
+
+Classes on 06.05 in asynchronous mode.
 
 ## Assignments
 
@@ -61,3 +63,7 @@ Deadline for all the assignments is next day by midnight.
 22.04 - Assignment 7. Dynamic reports [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_7.md)
 
 29.04 - Assignment 8. Intro to LaTeX [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_8.md)
+
+06.05 (asynchronous) - Assignment 9. Reporting [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_9.md)
+
+
