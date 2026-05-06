@@ -1,0 +1,87 @@
+---
+title: "Viewership Report: Game of Thrones"
+author: "Linxiao Mu"
+format:
+  html:
+    toc: true
+    theme: cosmo
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Introduction
+
+*Game of Thrones* is an American fantasy drama television series based on George R. R. Martin's novel series *A Song of Ice and Fire*. The show aired on HBO from 2011 to 2019 and consisted of eight seasons.
+
+![Promotional image or logo of *Game of Thrones*](images/got_image.png)
+
+## Data source
+
+The data used in this report describes the average number of U.S. viewers per season of *Game of Thrones*. The values are measured in millions of viewers and are based on publicly available viewership tables from Wikipedia.
+
+## Basic statistics
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("data/got_viewership.csv")
+df["season_to_season_change"] = df["avg_viewers_millions"].diff()
+
+df
+```
+
+```{python}
+summary = df["avg_viewers_millions"].describe()
+summary
+```
+
+## Viewership over time
+
+```{python}
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(8, 5))
+plt.plot(df["season"], df["avg_viewers_millions"], marker="o")
+plt.xlabel("Season")
+plt.ylabel("Average viewers (millions)")
+plt.title("Average U.S. viewership of Game of Thrones by season")
+plt.grid(True)
+plt.show()
+```
+
+## Season-to-season changes
+
+```{python}
+plt.figure(figsize=(8, 5))
+plt.bar(df["season"], df["season_to_season_change"])
+plt.xlabel("Season")
+plt.ylabel("Change in average viewers (millions)")
+plt.title("Season-to-season change in viewership")
+plt.axhline(0)
+plt.grid(True)
+plt.show()
+```
+
+## Observed changes
+
+The average viewership of *Game of Thrones* increased strongly over time. In season 1, the show had an average of 2.52 million U.S. viewers. By season 8, this number had increased to 11.99 million viewers.
+
+```{python}
+start = df.loc[df["season"] == 1, "avg_viewers_millions"].iloc[0]
+end = df.loc[df["season"] == 8, "avg_viewers_millions"].iloc[0]
+increase = end - start
+percent_increase = increase / start * 100
+
+print(f"The average viewership increased by {increase:.2f} million viewers between season 1 and season 8.")
+print(f"This represents an increase of approximately {percent_increase:.1f}%.")
+```
+
+The largest season-to-season increase happened between season 6 and season 7. The average viewership increased from 7.69 million to 10.26 million viewers, which is a rise of 2.57 million viewers.
+
+This suggests that the show became increasingly popular as it approached its final seasons. Unlike many long-running television series, *Game of Thrones* did not show a gradual decline in audience size. Instead, its average viewership reached its highest point in the final season.
+
+## AI use statement
+
+Minor help from Generative AI was used to plan the structure of this report, prepare a draft of the explanatory text, and suggest Python code for the charts. The data, calculations, charts, and final wording were reviewed and edited manually.
