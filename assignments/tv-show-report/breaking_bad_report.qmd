@@ -1,0 +1,119 @@
+---
+title: "Viewership Report: Breaking Bad"
+author: "Fan Zhao"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Introduction
+
+*Breaking Bad* is an American crime drama television series created and produced by Vince Gilligan for AMC. The show is set and filmed in Albuquerque, New Mexico. It follows Walter White, a high-school chemistry teacher who turns to producing and distributing methamphetamine after being diagnosed with lung cancer.
+
+The series premiered on AMC on January 20, 2008 and concluded on September 29, 2013. It has five seasons and 62 episodes. It was selected for this report because Wikipedia provides viewership data for its episodes and season averages.  [oai_citation:0‡维基百科](https://en.wikipedia.org/wiki/Breaking_Bad?utm_source=chatgpt.com)
+
+## Image
+
+![Title card of *Breaking Bad*](https://upload.wikimedia.org/wikipedia/en/6/61/Breaking_Bad_title_card.png){width=350}
+
+## Data source
+
+The data used in this report comes from the Ratings section of the Wikipedia page *List of Breaking Bad episodes*. The values represent average U.S. viewers per episode, measured in millions. Wikipedia lists the fifth season in two parts, so this report keeps Season 5A and Season 5B separate.  [oai_citation:1‡维基百科](https://en.wikipedia.org/wiki/List_of_Breaking_Bad_episodes?utm_source=chatgpt.com)
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data/breaking_bad_viewership.csv")
+df
+```
+
+## Basic statistics
+
+```{python}
+highest = df["avg_viewers_millions"].max()
+lowest = df["avg_viewers_millions"].min()
+mean_viewers = round(df["avg_viewers_millions"].mean(), 2)
+
+first_value = df.loc[df["season"] == "1", "avg_viewers_millions"].iloc[0]
+last_value = df.loc[df["season"] == "5B", "avg_viewers_millions"].iloc[0]
+total_change = round(last_value - first_value, 2)
+percent_change = round((total_change / first_value) * 100, 1)
+
+summary = pd.DataFrame({
+    "Statistic": [
+        "Lowest average viewership",
+        "Highest average viewership",
+        "Mean average viewership",
+        "Change from Season 1 to Season 5B",
+        "Percentage change from Season 1 to Season 5B"
+    ],
+    "Value": [
+        f"{lowest} million",
+        f"{highest} million",
+        f"{mean_viewers} million",
+        f"{total_change} million",
+        f"{percent_change}%"
+    ]
+})
+
+summary
+```
+
+## Viewership over time
+
+```{python}
+plt.figure(figsize=(8, 5))
+plt.plot(df["season"], df["avg_viewers_millions"], marker="o")
+plt.title("Average U.S. Viewership of Breaking Bad")
+plt.xlabel("Season")
+plt.ylabel("Average viewers per episode, millions")
+plt.grid(True)
+plt.show()
+```
+
+## Season-to-season changes
+
+```{python}
+df["change_from_previous"] = df["avg_viewers_millions"].diff()
+
+plt.figure(figsize=(8, 5))
+plt.bar(df["season"], df["change_from_previous"])
+plt.axhline(0)
+plt.title("Change in Average Viewership Between Seasons")
+plt.xlabel("Season")
+plt.ylabel("Change in viewers, millions")
+plt.grid(True, axis="y")
+plt.show()
+```
+
+## Interpretation of changes
+
+```{python}
+biggest_increase_row = df.loc[df["change_from_previous"].idxmax()]
+biggest_increase_season = biggest_increase_row["season"]
+biggest_increase_value = round(biggest_increase_row["change_from_previous"], 2)
+
+print(f"The average viewership increased by {total_change} million viewers from Season 1 to Season 5B.")
+print(f"This is a {percent_change}% increase compared with Season 1.")
+print(f"The largest increase happened before Season {biggest_increase_season}: +{biggest_increase_value} million viewers.")
+```
+
+The data shows a clear upward trend in the average U.S. viewership of *Breaking Bad*. The average viewership increased from 1.23 million viewers in Season 1 to 6.04 million viewers in Season 5B. This means that the average audience grew by 4.81 million viewers, or approximately 391.1%.
+
+The biggest jump occurred between Season 5A and Season 5B. Average viewership increased from 2.60 million to 6.04 million viewers, which is an increase of 3.44 million viewers. This suggests that the second half of the final season attracted much more attention than the earlier seasons.
+
+## References
+
+- Wikipedia contributors. *Breaking Bad*. Wikipedia.
+- Wikipedia contributors. *List of Breaking Bad episodes*. Wikipedia.
+
+## Generative AI acknowledgement
+
+Small parts of the report structure and Python plotting code were prepared with help from ChatGPT. The data source, final text, calculations, and report formatting were checked and adjusted by the author.
