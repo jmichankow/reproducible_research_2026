@@ -1,0 +1,99 @@
+---
+title: "Friends Viewership Report"
+author: "yifan yang474665"
+date: "2026-05-08"
+format:
+  html:
+    theme: cosmo
+    toc: true
+---
+
+## Introduction
+
+*Friends* is an American television sitcom created by David Crane and Marta Kauffman. 
+It aired on NBC from September 22, 1994 to May 6, 2004, lasting 10 seasons and 236 episodes. 
+The show follows six friends living in New York City: Rachel, Monica, Phoebe, Joey, Chandler, and Ross.
+*Friends* became one of the most popular TV shows in history and remains widely watched today.
+
+![Friends Logo](Friends_logo.svg){width=400}
+
+## Viewership Data
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(scales)
+library(knitr)
+
+# Data from Wikipedia
+friends_data <- data.frame(
+  Season = 1:10,
+  Viewers = c(24.3, 30.0, 24.9, 24.0, 23.5, 20.7, 20.2, 24.5, 21.8, 22.8)
+)
+```
+
+### Summary Table
+
+```{r}
+#| echo: false
+friends_data |>
+  mutate(Viewers = paste0(Viewers, "M")) |>
+  rename("Season" = Season, "Avg. Viewers (millions)" = Viewers) |>
+  kable()
+```
+
+## Viewership Over Time
+
+```{r}
+#| echo: false
+ggplot(friends_data, aes(x = Season, y = Viewers)) +
+  geom_line(color = "#4A90D9", linewidth = 1.2) +
+  geom_point(color = "#4A90D9", size = 3) +
+  scale_x_continuous(breaks = 1:10) +
+  labs(
+    title = "Friends — Average Viewers per Season",
+    x = "Season",
+    y = "Viewers (millions)"
+  ) +
+  theme_minimal()
+```
+
+## Season-to-Season Changes
+
+```{r}
+#| echo: false
+friends_data <- friends_data |>
+  mutate(Change = Viewers - lag(Viewers))
+
+ggplot(friends_data[-1, ], aes(x = Season, y = Change, fill = Change > 0)) +
+  geom_col() +
+  scale_fill_manual(values = c("TRUE" = "#2ECC71", "FALSE" = "#E74C3C"),
+                    labels = c("TRUE" = "Increase", "FALSE" = "Decrease"),
+                    name = "") +
+  scale_x_continuous(breaks = 2:10) +
+  labs(
+    title = "Friends — Season-to-Season Change in Viewership",
+    x = "Season",
+    y = "Change in Viewers (millions)"
+  ) +
+  theme_minimal()
+```
+
+## Analysis
+
+```{r}
+#| echo: false
+max_s   <- friends_data$Season[which.max(friends_data$Viewers)]
+max_v   <- max(friends_data$Viewers)
+min_s   <- friends_data$Season[which.min(friends_data$Viewers)]
+min_v   <- min(friends_data$Viewers)
+drop_s2_s7 <- friends_data$Viewers[2] - friends_data$Viewers[7]
+```
+
+*Friends* reached its peak viewership in Season `r max_s` with `r max_v` million average viewers. 
+The show experienced a notable decline from Season 2 to Season 7, dropping by `r drop_s2_s7` million viewers. 
+The lowest average viewership was recorded in Season `r min_s` with `r min_v` million viewers.
+Interestingly, Season 8 saw a recovery, climbing back to `r friends_data$Viewers[8]` million viewers.
