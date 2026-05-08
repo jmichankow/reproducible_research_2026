@@ -97,3 +97,9 @@ drop_s2_s7 <- friends_data$Viewers[2] - friends_data$Viewers[7]
 The show experienced a notable decline from Season 2 to Season 7, dropping by `r drop_s2_s7` million viewers. 
 The lowest average viewership was recorded in Season `r min_s` with `r min_v` million viewers.
 Interestingly, Season 8 saw a recovery, climbing back to `r friends_data$Viewers[8]` million viewers.
+
+## AI Assistance
+
+AI tools were used to help with the R code for data visualisation 
+and report formatting. The viewership data was manually collected 
+from Wikipedia. All analysis and interpretation is my own.
