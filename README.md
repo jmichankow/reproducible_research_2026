@@ -66,6 +66,6 @@ Deadline for all the assignments is next day by midnight.
 
 06.05 (asynchronous) - Assignment 9. Reporting [Link](https://github.com/jmichankow/reproducible_research_2026/blob/main/assignments/RR_assignment_9.md)
 
-13.05.2025 - Assignment 10. Metaanalysis [Link](https://github.com/jmichankow/reproducible_research_2026/tree/main/lessons/RR_10_Metaanalysis)
+13.05 - Assignment 10. Metaanalysis [Link](https://github.com/jmichankow/reproducible_research_2026/tree/main/assignments/RR_10_Metaanalysis)
 
 
